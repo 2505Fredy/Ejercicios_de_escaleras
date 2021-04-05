@@ -21,10 +21,10 @@ void imprimirescalera(int escalon, int persona){
 
   else { cout << "El valor ingresado no es válido\n"; return;}
 }
-Hice lo que ud. me sugirió profesor; como veo que cada animación debe ser con la escalera completa, creé otra función para imprimirlo y borrarlo. No tengo idea de ralentizarlo. 
+//Hice lo que ud. me sugirió profesor; como veo que cada animación debe ser con la escalera completa, creé otra función para imprimirlo y borrarlo. No tengo idea de ralentizarlo. 
 
-La función imprimirescalera() imprime la persona en la posición indicada.
-La función escaleraDoble() ordena a imprimirescalera() variando la posición.
+//La función imprimirescalera() imprime la persona en la posición indicada.
+//La función escaleraDoble() ordena a imprimirescalera() variando la posición.
 
 void escaleraDoble(int persona){
   if (persona>0){ 
