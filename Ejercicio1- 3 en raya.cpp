@@ -15,7 +15,6 @@ void escoger(){
 }
 
 int main(){
-  cout << "Hola mundo" << endl;
   escoger();
   return 0;
 }
