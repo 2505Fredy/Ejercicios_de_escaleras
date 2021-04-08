@@ -26,7 +26,6 @@ void tablero(){
 }
 
 int main(){
-  cout << "Hola mundo" << endl;
   tablero();
   return 0;
 }
