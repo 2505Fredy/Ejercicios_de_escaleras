@@ -1,31 +1,51 @@
 #include <iostream>
 using namespace std;
 
-void linea(){
-  for (int i=0; i<11; i++) cout << "-";
+#include <iostream>
+using namespace std;
+
+void linea(int numero){
+  for (int i=0; i<4*numero-1; i++) cout << "-";
   cout << endl; return;
 }
 
-void tablero(){
-  int valor=1;
-  for (int i=0; i<5; i++){
+void defineMatriz(int numero){
+  //Se define la matriz de 3x3 ejecutando la función defineMatriz(3) en el main.
+  int matriz[numero][numero];
+  //Se inicializa la matriz con caracteres del 1 al numero*numero(En este caso del 1 al 9).
+  int i=1;
+  for (int valor=0; valor<numero; valor++){
+    for (int valor2=0; valor2<numero; valor2++) matriz[valor][valor2]= i++;
+  }
+  //Se muestra en pantalla(imprime) la matriz en formato de tablero.
+  int fila=0;
+  for (int i=0; i<2*numero-1; i++){
     if (i%2==0){ 
-      for (int j=0; j<10; j++){
+      int col=0;
+      cout << " ";
+      int value=1;
+      for (int j=0; j<4*numero-1; j++){
         if (j%2==0) cout << " ";
         else{
-          if (j==1 || j==5 || j==9){
-            cout << valor;
-            if (valor%3==0) cout << endl; valor++;
+          if (j==value){
+            cout << matriz[fila][col];
+            value+=4;
+            if ((col+1)%numero==0)  cout << endl; 
+            col++;
           }
           else cout << "|";
         }
       }      
     }
-    else linea();
+    else {
+      fila++;
+      linea(numero);
+    }
   }
+  return;
 }
 
 int main(){
-  tablero();
+  defineMatriz(3);
   return 0;
 }
