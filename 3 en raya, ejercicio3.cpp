@@ -46,19 +46,11 @@ void defineMatriz(int numero, int elegido){
     }
   }
   return;
-}   
-    }
-    else {
-      fila++;
-      linea(numero);
-    }
-  }
-  return;
-}
+} 
 
 int main(){
-  const int valor=3; //Le asigné este valor porque en el 3 en raya es constante el número de filas y columnas y al trabajar con matrices del tipo char para su valor 'X', luego del 9 toma símbolos como valores
-  char elegido;
+  const int valor=3; //Le asigné este valor porque en el 3 en raya es constante el n° de filas y columnas, además para usar el valor 'X'.
+  char elegido;     //Es en éste código donde cambié el tipo de dato de la matriz, de int a char.
   cout << "Escoge una posición en el tablero: " << endl; //Debe ser un número entre 1 y el número de filas o columnas al cuadrado; en este caso entre 1 y 9. Consideramos que el usuario ingresa los valores solicitados
   cin >> elegido;
   defineMatriz(valor, elegido);
