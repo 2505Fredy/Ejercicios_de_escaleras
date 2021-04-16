@@ -9,15 +9,17 @@ void linea(int numero){
   cout << endl; return;
 }
 
-void defineMatriz(int numero){
-  //Se define la matriz de 3x3 ejecutando la función defineMatriz(3) en el main.
-  int matriz[numero][numero];
-  //Se inicializa la matriz con caracteres del 1 al numero*numero(En este caso del 1 al 9).
-  int i=1;
-  for (int valor=0; valor<numero; valor++){
-    for (int valor2=0; valor2<numero; valor2++) matriz[valor][valor2]= i++;
+void inicializar(char matriz[][3]){
+  char valor='1';
+  for (int i=0; i<3; i++){
+    for (int j=0; j<3; j++) {
+      matriz[i][j] = valor;
+      valor++;
+    }
   }
-  //Se muestra en pantalla(imprime) la matriz en formato de tablero.
+}
+
+void imprimeTablero(char matriz[][3], int numero){
   int fila=0;
   for (int i=0; i<2*numero-1; i++){
     if (i%2==0){ 
@@ -42,10 +44,10 @@ void defineMatriz(int numero){
       linea(numero);
     }
   }
-  return;
 }
 
 int main(){
-  defineMatriz(3);
-  return 0;
+  char matriz[3][3];
+  inicializar(matriz);
+  imprimeTablero(matriz, 3);
 }
